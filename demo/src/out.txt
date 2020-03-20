@@ -1,0 +1,161 @@
+[demo:26375]    classlist:   1,416.85 ms,  0.96 GB
+[demo:26375]        (cap):     530.49 ms,  0.96 GB
+Point to add NativeImageInlineDuringParsingPlugin
+NativeImageInlineDuringParsingPlugin added
+[demo:26375]        setup:   1,618.14 ms,  0.96 GB
+Caller: main (class: Demo), par: String[], node count: 6
+Callee: <init> (class: Demo), par: int, int, node count: 10
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|Parameter(1) - node represents a placeholder for an incoming argument to a function call.
+3|Parameter(2) - node represents a placeholder for an incoming argument to a function call.
+4|FrameState@0
+5|StoreField#x - node represents a write to a static or instance field.
+6|FrameState@9
+7|StoreField#y - node represents a write to a static or instance field.
+8|FrameState@14
+9|Return
+
+Caller: main (class: Demo), par: String[], node count: 9
+Callee: setX (class: Demo), par: int, node count: 7
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|Parameter(1) - node represents a placeholder for an incoming argument to a function call.
+3|FrameState@0
+4|StoreField#x - node represents a write to a static or instance field.
+5|FrameState@5
+6|Return
+
+Caller: main (class: Demo), par: String[], node count: 13
+Callee: setY (class: Demo), par: int, node count: 7
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|Parameter(1) - node represents a placeholder for an incoming argument to a function call.
+3|FrameState@0
+4|StoreField#y - node represents a write to a static or instance field.
+5|FrameState@5
+6|Return
+
+Caller: main (class: Demo), par: String[], node count: 17
+Callee: getZbir (class: Demo), par: , node count: 18
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|FrameState@0
+3|MethodCallTarget
+4|Invoke#Demo.getX
+5|FrameState@4
+6|MethodCallTarget
+7|Invoke#Demo.getY
+8|FrameState@8
+9|+
+10|Constant(2, i32) - node represents a constant
+11|Constant(31, i32) - node represents a constant
+12|>>
+13|>>>
+14|+
+15|Constant(1, i32) - node represents a constant
+16|>>
+17|Return
+
+Caller: runCore (class: com.oracle.svm.core.JavaMainWrapper), par: int, CCharPointerPointer, node count: 51
+Callee: main (class: Demo), par: String[], node count: 32
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|FrameState@0
+3|NewInstance
+4|Constant(10, i32) - node represents a constant
+5|Constant(20, i32) - node represents a constant
+6|MethodCallTarget
+7|Invoke#Demo.<init>
+8|FrameState@11
+9|MethodCallTarget
+10|Invoke#Demo.setX
+11|FrameState@18
+12|Constant(30, i32) - node represents a constant
+13|MethodCallTarget
+14|Invoke#Demo.setY
+15|FrameState@24
+16|LoadField#out - node represents a read of a static or instance field.
+17|MethodCallTarget
+18|Invoke#Demo.getZbir
+19|FrameState@31
+20|IsNull
+21|BytecodeException#NULL_POINTER
+22|Begin
+23|Begin
+24|If
+25|FrameState@31
+28|Pi
+29|MethodCallTarget
+30|Invoke#PrintStream.println
+31|FrameState@34
+32|Return
+33|Unwind
+
+Caller: main (class: Demo), par: String[], node count: 6
+Callee: <init> (class: Demo), par: int, int, node count: 10
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|Parameter(1) - node represents a placeholder for an incoming argument to a function call.
+3|Parameter(2) - node represents a placeholder for an incoming argument to a function call.
+4|FrameState@0
+5|StoreField#x - node represents a write to a static or instance field.
+6|FrameState@9
+7|StoreField#y - node represents a write to a static or instance field.
+8|FrameState@14
+9|Return
+
+Caller: main (class: Demo), par: String[], node count: 9
+Callee: setX (class: Demo), par: int, node count: 7
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|Parameter(1) - node represents a placeholder for an incoming argument to a function call.
+3|FrameState@0
+4|StoreField#x - node represents a write to a static or instance field.
+5|FrameState@5
+6|Return
+
+Caller: main (class: Demo), par: String[], node count: 13
+Callee: setY (class: Demo), par: int, node count: 7
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|Parameter(1) - node represents a placeholder for an incoming argument to a function call.
+3|FrameState@0
+4|StoreField#y - node represents a write to a static or instance field.
+5|FrameState@5
+6|Return
+
+Caller: main (class: Demo), par: String[], node count: 17
+Callee: getZbir (class: Demo), par: , node count: 18
+0|StartNode
+1|Parameter(0) - node represents a placeholder for an incoming argument to a function call.
+2|FrameState@0
+3|MethodCallTarget
+4|Invoke#Demo.getX
+5|FrameState@4
+6|MethodCallTarget
+7|Invoke#Demo.getY
+8|FrameState@8
+9|+
+10|Constant(2, i32) - node represents a constant
+11|Constant(31, i32) - node represents a constant
+12|>>
+13|>>>
+14|+
+15|Constant(1, i32) - node represents a constant
+16|>>
+17|Return
+
+[demo:26375]   (typeflow):   4,208.45 ms,  1.72 GB
+[demo:26375]    (objects):   3,805.24 ms,  1.72 GB
+[demo:26375]   (features):     176.10 ms,  1.72 GB
+[demo:26375]     analysis:   8,424.79 ms,  1.72 GB
+[demo:26375]     (clinit):     134.88 ms,  1.72 GB
+[demo:26375]     universe:     393.02 ms,  1.72 GB
+[demo:26375]      (parse):     629.15 ms,  1.72 GB
+[demo:26375]     (inline):   1,140.94 ms,  1.73 GB
+[demo:26375]    (compile):   4,392.39 ms,  2.35 GB
+[demo:26375]      compile:   6,522.00 ms,  2.35 GB
+[demo:26375]        image:     867.87 ms,  2.35 GB
+[demo:26375]        write:     134.35 ms,  2.35 GB
+[demo:26375]      [total]:  19,590.99 ms,  2.35 GB
