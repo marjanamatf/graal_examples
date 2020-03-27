@@ -21,17 +21,17 @@ public class Demo {
         return y;
     }
 
-    public int getZbir(){
-        int zbir = getX() + getY();
-        zbir /= 2;
-        return zbir;
+    public int getAverage(){
+        int sum = getX() + getY();
+        sum /= 2;
+        return sum;
     }
 
     public static void main(String[] args){
        Demo d = new Demo(10,20);
-       d.setX(20);
-       d.setY(30);
-       System.out.println(d.getZbir());
+       d.setX(15);
+       d.setY(25);
+       System.out.println(d.getAverage());
     }
 
 }
